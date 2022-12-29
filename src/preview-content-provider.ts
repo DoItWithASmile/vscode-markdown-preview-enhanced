@@ -90,6 +90,9 @@ export class MarkdownPreviewEnhancedView {
   }
 
   private refreshAllPreviews() {
+    // refresh styles.less
+    this.refreshStyles();
+
     // clear caches
     for (const key in this.engineMaps) {
       if (this.engineMaps.hasOwnProperty(key)) {
@@ -113,6 +116,16 @@ export class MarkdownPreviewEnhancedView {
         }
       }
     }
+  }
+
+  private refreshStyles() {
+    // get config patch of mume
+    let configPath = mume.getExtensionConfigPath();
+
+    // trigger an update, jsut like mume would via fs.watch when file is changed
+    mume.utility.getGlobalStyles(configPath).then((css) => {
+      mume.configs.globalStyle = css;
+    });
   }
 
   /**
@@ -576,6 +589,9 @@ export class MarkdownPreviewEnhancedView {
   }
 
   public refreshPreviewPanel(sourceUri: Uri) {
+    // refresh styles.less
+    this.refreshStyles();
+
     this.preview2EditorMap.forEach((editor, previewPanel) => {
       if (
         previewPanel &&
@@ -594,6 +610,9 @@ export class MarkdownPreviewEnhancedView {
   }
 
   public refreshPreview(sourceUri: Uri) {
+    // refresh styles.less
+    this.refreshStyles();
+
     const engine = this.getEngine(sourceUri);
     if (engine) {
       engine.clearCaches();
