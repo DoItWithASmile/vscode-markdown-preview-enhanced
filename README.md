@@ -1,3 +1,14 @@
+# Fork of shd101wyy/vscode-markdown-preview-enhanced
+
+This is a fork of shd101wyy/vscode-markdown-preview-enhanced.
+
+It adds the following features:
+
+- reload also triggers a reload of style.less
+- \${workspacePath} and environment variables can be used in configPath in order to setup per-workspace configurations
+
+It is published with a version suffix of '-se' to distinguish it from the original.
+
 <h1 align="center"> Markdown Preview Enhanced </h1>
 
 ![intro](https://user-images.githubusercontent.com/1908863/28495106-30b3b15e-6f09-11e7-8eb6-ca4ca001ab15.png)
