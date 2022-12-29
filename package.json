@@ -1,7 +1,7 @@
 {
   "name": "markdown-preview-enhanced",
   "displayName": "%displayName%",
-  "version": "0.6.5",
+  "version": "0.6.5-se",
   "description": "%description%",
   "categories": [
     "Other"
@@ -10,16 +10,17 @@
     "markdown"
   ],
   "bugs": {
-    "url": "https://github.com/shd101wyy/vscode-markdown-preview-enhanced/issues"
+    "url": "https://github.com/DoItWithASmile/vscode-markdown-preview-enhanced/issues"
   },
-  "repository": "https://github.com/shd101wyy/vscode-markdown-preview-enhanced",
+  "repository": "https://github.com/DoItWithASmile/vscode-markdown-preview-enhanced",
   "license": "NCSA",
   "contributors": [
     "shd101wyy",
     "kachkaev",
-    "gabyx"
+    "gabyx",
+    "DoItWithASmile"
   ],
-  "publisher": "shd101wyy",
+  "publisher": "DoItWithASmile",
   "main": "./out/src/extension",
   "scripts": {
     "check": "npm run check:eslint && npm run check:prettier && npm run check:tsc && npm run check:tslint",
